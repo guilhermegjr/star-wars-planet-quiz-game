@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 import { Planet } from '../models/planet.model';
 
-// GetRandomPlanet
+// Ação responsável por buscar randomicamente um planeta
 // --------------------------------------------------------
 export const GetRandomPlanet = createAction('[Planet] Get random planet');
 export const GetRandomPlanetSuccess = createAction(

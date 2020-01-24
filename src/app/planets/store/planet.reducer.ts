@@ -3,7 +3,6 @@ import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { Planet } from '../models/planet.model';
 import * as PlanetActions from './planet.actions';
 
-// Define the Entity interface to the Planets
 export interface PlanetState extends EntityState<Planet> {
 	lastViewdPlanetId: number;
 	viewdPlanetsIds: number[];
@@ -11,10 +10,8 @@ export interface PlanetState extends EntityState<Planet> {
 	error: any;
 }
 
-// Define the planet adapter to be used to update the state.
 export const planetAdapter: EntityAdapter<Planet> = createEntityAdapter<Planet>();
 
-// Define the initial state to the Planet Entity
 export const initialState: PlanetState = planetAdapter.getInitialState({
 	lastViewdPlanetId: null,
 	viewdPlanetsIds: [],
@@ -22,7 +19,6 @@ export const initialState: PlanetState = planetAdapter.getInitialState({
 	error: null,
 });
 
-// Define the reducer to transform the data and to create the new state
 const reducer = createReducer(
 	initialState,
 	on(PlanetActions.GetRandomPlanet, state => ({ ...state, error: null, isLoadingPlanet: true })),
@@ -41,7 +37,6 @@ const reducer = createReducer(
 	)
 );
 
-// Export the reducer
 export function planetReducer(state: PlanetState, action: Action) {
 	return reducer(state, action);
 }

@@ -13,6 +13,9 @@ export class PlanetInfoComponent implements OnInit {
 
 	ngOnInit() {}
 
+	/**
+	 * Busca detalhes sobre a relação do planeta com os filmes
+	 */
 	getFilmInfo() {
 		if (!this.planet) {
 			return '';

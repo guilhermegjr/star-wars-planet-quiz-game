@@ -16,9 +16,9 @@ export class PlanetEffects {
 		private store: Store<PlanetState>
 	) {}
 
-	// This effect will load all planets of the Star Wars
+	// Efeito responsável por buscar o planeta randmicamente.
 	// --------------------------------------------------
-	GetRandomPlanet$ = createEffect(() =>
+	getRandomPlanet$ = createEffect(() =>
 		this.actions$.pipe(
 			ofType(PlanetActions.GetRandomPlanet),
 			withLatestFrom(this.store.pipe(select(getPlanetIds))),

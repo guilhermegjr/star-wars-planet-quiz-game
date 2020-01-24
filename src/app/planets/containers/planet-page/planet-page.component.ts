@@ -20,10 +20,8 @@ export class PlanetPageComponent implements OnInit {
 	constructor(private store: Store<PlanetState>) {}
 
 	ngOnInit() {
-		// Busca um planeta ao carregar o componente.
 		this.getNewPlanet();
 
-		// Obtem os observables com as informações a serem usadas na apresentação
 		this.planet$ = this.store.pipe(select(getLastViewdPlanet));
 		this.isLoading$ = this.store.pipe(select(isLoadingPlanet));
 		this.error$ = this.store.pipe(select(getError));
