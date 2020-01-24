@@ -6,6 +6,8 @@ I did not used any front-end framework, such as **Angular Material**, **Ionic**,
 
 I also used **@media screen** to make the UI responsible and to have some differences in Mobile screens.
 
+Want to see it in action? **[Click here](https://star-wars-planet-quiz-game.firebaseapp.com/)**
+
 # Apllication structure
 
 # About the develoment workflow
