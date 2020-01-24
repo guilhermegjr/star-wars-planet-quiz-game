@@ -1,0 +1,17 @@
+.container {
+	background-color: black;
+	p {
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	p {
+		font-size: 20px !important;
+	}
+	img {
+		width: 100%;
+	}
+}

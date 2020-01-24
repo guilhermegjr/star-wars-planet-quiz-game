@@ -1,0 +1,29 @@
+<div
+	fxLayout="column"
+	fxFlexFill
+	*ngIf="{ planet: planet$ | async, isLoading: isLoading$ | async } as data"
+>
+	<sw-header>
+		<ng-container *ngIf="!data.isLoading; else loading">
+			{{ !data.planet ? 'Star Wars Game' : data.planet.name }}
+		</ng-container>
+		<ng-template #loading>
+			Wait a second...
+		</ng-template>
+	</sw-header>
+
+	<sw-error-handler fxFlex [error]="error$ | async" (onretry)="getNewPlanet()">
+		<sw-loading fxFlex *ngIf="data.isLoading">
+			Looking for a new planet...
+		</sw-loading>
+
+		<div class="content" fxFlex fxLayout="column" *ngIf="!data.isLoading && data.planet">
+			<sw-planet-info fxFlex [planet]="data.planet"></sw-planet-info>
+			<sw-footer>
+				<sw-button (click)="getNewPlanet()">
+					Next
+				</sw-button>
+			</sw-footer>
+		</div>
+	</sw-error-handler>
+</div>

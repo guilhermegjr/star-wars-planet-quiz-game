@@ -1,0 +1,26 @@
+<div fxFlex class="container" fxLayoutAlign="start center">
+	<div fxFlex>
+		<div class="game-title">
+			<img src="./assets/star-wars.png" alt="" />
+		</div>
+		<div fxLayout="row" class="row">
+			<div fxFlex class="label">Planet name:</div>
+			<div fxFlex class="text">{{ planet.name }}</div>
+		</div>
+		<div fxLayout="row" class="row">
+			<div fxFlex class="label">Population:</div>
+			<div fxFlex class="text">{{ planet.population }}</div>
+		</div>
+		<div fxLayout="row" class="row">
+			<div fxFlex class="label">Climate:</div>
+			<div fxFlex class="text">{{ planet.climate }}</div>
+		</div>
+		<div fxLayout="row" class="row">
+			<div fxFlex class="label">Terrain:</div>
+			<div fxFlex class="text">{{ planet.terrain }}</div>
+		</div>
+		<div class="row films">
+			<div fxFlex class="text">{{ getFilmInfo() }}</div>
+		</div>
+	</div>
+</div>

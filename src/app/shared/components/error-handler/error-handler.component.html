@@ -1,0 +1,11 @@
+<div *ngIf="error" fxFlex fxLayout="column" fxLayoutAlign="center center">
+	<img src="./assets/error-icon.png" alt="" />
+	<p>Oops... Something wrong happened.</p>
+	<sw-button (click)="onretry.emit()">
+		Try again
+	</sw-button>
+</div>
+
+<div fxFlex [style.display]="error ? 'none' : 'flex'">
+	<ng-content></ng-content>
+</div>

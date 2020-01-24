@@ -1,0 +1,21 @@
+@import '../../styles/colors.scss';
+
+.header {
+	padding: 30px;
+	background: $primaryColor;
+	background: linear-gradient(15deg, $primaryColor 0%, $secondaryColor 100%);
+	color: white;
+	font-size: medium;
+	font-size: 54px;
+	margin-bottom: 3px;
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		padding: 15px;
+		font-size: 24px;
+	}
+}
