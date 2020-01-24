@@ -32,7 +32,7 @@ export class PlanetServices {
 	private getPlanetIdNotViewd(viewdPlanetIds: number[]): number {
 		const id = Math.floor(Math.random() * 61) + 1;
 
-		return viewdPlanetIds.length < 61 && viewdPlanetIds.find(_id => _id === id)
+		return viewdPlanetIds.length < 61 && viewdPlanetIds.find(planetId => planetId === id)
 			? this.getPlanetIdNotViewd(viewdPlanetIds)
 			: id;
 	}

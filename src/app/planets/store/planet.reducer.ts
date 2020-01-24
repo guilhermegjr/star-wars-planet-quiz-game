@@ -1,4 +1,4 @@
-import { Action, createReducer, on, createFeatureSelector } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { Planet } from '../models/planet.model';
 import * as PlanetActions from './planet.actions';

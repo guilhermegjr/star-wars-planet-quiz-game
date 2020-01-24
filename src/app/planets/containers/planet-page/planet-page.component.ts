@@ -5,7 +5,6 @@ import * as PlanetActions from '../../store/planet.actions';
 import { Observable } from 'rxjs';
 import { Planet } from '../../models/planet.model';
 import { getLastViewdPlanet, isLoadingPlanet, getError } from '../../store/planet.selectors';
-import { tap } from 'rxjs/operators';
 
 @Component({
 	selector: 'sw-planet-page',
