@@ -1,5 +1,5 @@
 {
-	"name": "Star Wars Planet Quiz Game",
+	"name": "star-wars-planet-quiz-game",
 	"version": "1.0.0",
 	"author": {
 		"name": "Guilherme de Jesus Rafael",
@@ -11,7 +11,8 @@
 		"build": "ng build",
 		"test": "ng test",
 		"lint": "ng lint",
-		"e2e": "ng e2e"
+		"e2e": "ng e2e",
+		"deploy": "ng build && firebase deploy"
 	},
 	"private": true,
 	"dependencies": {
