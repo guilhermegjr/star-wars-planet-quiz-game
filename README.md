@@ -4,6 +4,8 @@ This is a simple project to explore a lot of feature of **Angular**, **Angular F
 
 I did not used any front-end framework, such as **Angular Material**, **Ionic**, **Bootstrap** and so on. I decided to use just the good and old **CSS** to create all the style of the application.
 
+I also used **@media screen** to make the UI responsible and to have some differences in Mobile screens.
+
 # Apllication structure
 
 # About the develoment workflow

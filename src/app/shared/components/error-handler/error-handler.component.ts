@@ -25,6 +25,9 @@ export class ErrorHandlerComponent implements OnInit, OnChanges {
 
 	ngOnChanges(changes: SimpleChanges) {
 		if (changes.error.currentValue) {
+            // É necessário forçar o change detection para garantir
+            // que erros fora do escopo, não impactem a apresentação
+            // da mensagem de erro.
 			this.cdr.detectChanges();
 		}
 	}
