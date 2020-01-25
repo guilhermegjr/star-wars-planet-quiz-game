@@ -1,6 +1,6 @@
 # Star Wars Planet Quiz Game
 
-This is a simple project to explore a lot of feature of **Angular**, **Angular FlexLayout**, **NGRX** and **HTML/CSS**.
+This is a simple project to explore a lot of the feature from **Angular**, **Angular FlexLayout**, **NGRX** and **HTML/CSS**.
 
 I did not used any front-end framework, such as **Angular Material**, **Ionic**, **Bootstrap** and so on. I decided to use just the good and old **CSS** to create all the style of the application.
 
