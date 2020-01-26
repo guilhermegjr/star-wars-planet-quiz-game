@@ -1,16 +1,31 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, by, element, ExpectedConditions, $ } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Star Wars Planet Quiz Game', () => {
 	let page: AppPage;
 
 	beforeEach(() => {
 		page = new AppPage();
 	});
 
-	it('should display welcome message', () => {
+	it('should have a header, container and a footer', async () => {
 		page.navigateTo();
-		expect(page.getTitleText()).toEqual('Welcome to star-wars-app!');
+		expect(page.hasHeaderContentAndFooter()).toBeTruthy();
+	});
+
+	it('should present the planet info', async () => {
+		await element(by.css('sw-button')).click();
+
+		const until = ExpectedConditions;
+
+		const planetInfo = element(by.css('sw-planet-info'));
+		browser.wait(
+			until.visibilityOf(planetInfo),
+			5000,
+			'Planet Info taking too long to appear in the DOM'
+		);
+
+		expect(await planetInfo.isPresent()).toBeTruthy();
 	});
 
 	afterEach(async () => {
